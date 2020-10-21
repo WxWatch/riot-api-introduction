@@ -15,7 +15,7 @@ const server = http.createServer((request, response) => {
 server.listen(PORT, () => console.log("Server is listening on port %s", PORT));
 
 function callAPI(summonerName, response) {
-    const url = 'https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/' + summonerName + '?api_key=' + apiKey;
+    const url = 'https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/' + summonerName + '?api_key=' + apiKey;
 
     https.get(url, (resp) => {
         let data = '';
